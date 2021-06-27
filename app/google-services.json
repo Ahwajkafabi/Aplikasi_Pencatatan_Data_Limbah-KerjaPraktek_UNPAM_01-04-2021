@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "698452834772",
+    "project_id": "pencatatan-datalimbah",
+    "storage_bucket": "pencatatan-datalimbah.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:698452834772:android:1e8e8e2bc5ab8e28317e41",
+        "android_client_info": {
+          "package_name": "com.ahwajkafabi.pencatatandatalimbah"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "698452834772-1toj2uq6a7h6fo5t9b2r58c9l8rkd9fv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeZ2Ybn6XoL2fNIhYW65UUDOtcH9bktu0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "698452834772-1toj2uq6a7h6fo5t9b2r58c9l8rkd9fv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

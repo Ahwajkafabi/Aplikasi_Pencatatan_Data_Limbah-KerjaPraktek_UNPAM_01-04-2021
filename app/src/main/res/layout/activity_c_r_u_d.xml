@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/holo_red_light"
+    tools:context=".CRUDActivity">
+
+    <ProgressBar
+        android:id="@+id/mProgressBarSave"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:indeterminate="true"
+        android:indeterminateBehavior="cycle"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="800dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp">
+
+
+            <TextView
+                android:id="@+id/headerTxt"
+                fontPath="fonts/Roboto-Bold.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="EDIT DATA CEKHLIST"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/white"
+                tools:ignore="MissingPrefix"
+                android:gravity="center_horizontal" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/card_margin"
+                app:cardBackgroundColor="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/text_padding"
+                        android:text="INTRUKSI"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:textColor="@color/skyblue" />
+
+                    <TextView
+                        android:id="@+id/instructionsTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/text_padding"
+                        android:text="Pengecekan detail data cekhlist di teks lalu klik tanda ceklis. Beberapa bidang seperti nama anda dan lokasi harus disediakan." />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/card_margin">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/text_padding"
+                        android:text="Data Pribadi"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:textColor="@color/niceGreenish"
+                        tools:ignore="MissingPrefix" />
+
+                    <EditText
+                        android:id="@+id/nameTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="69dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:hint="Nama"
+                        tools:ignore="MissingPrefix" />
+
+                    <EditText
+                        android:id="@+id/descriptionTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="69dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:hint="KETERANGAN"
+                        android:minLines="3"
+                        tools:ignore="MissingPrefix" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/card_margin">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/text_padding"
+                        android:text="Detail Lokasi"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:textColor="@color/niceGreenish" />
+
+                    <EditText
+                        android:id="@+id/lokasiTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="69dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:hint="Lokasi"
+                        tools:ignore="MissingPrefix" />
+
+                    <EditText
+                        android:id="@+id/hariTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="69dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="HARI"
+                        tools:ignore="MissingPrefix" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/card_margin">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/card_margin">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/text_padding"
+                            android:text="Tanggal Pengecekan Data"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                            android:textColor="@color/niceGreenish" />
+
+                        <android.helper.DateTimePickerEditText
+                            android:id="@+id/dobTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/text_padding"
+                            android:hint="Tanggal Pengecekan Air Limbah"
+                            tools:ignore="MissingPrefix" />
+
+                        <android.helper.DateTimePickerEditText
+                            android:id="@+id/dodTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/text_padding"
+                            android:hint="Tanggal Pengecekan Air Tanah"
+                            tools:ignore="MissingPrefix" />
+
+                        <EditText
+                            android:id="@+id/phinletmskTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="69dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:hint="PH Inlet Masuk"
+                            tools:ignore="MissingPrefix" />
+
+                        <EditText
+                            android:id="@+id/phinletoutTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="69dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:hint="PH Inlet Keluar"
+                            android:minLines="3"
+                            tools:ignore="MissingPrefix" />
+
+                        <EditText
+                            android:id="@+id/phoutletmskTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="69dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:hint="PH Outlet Masuk"
+                            tools:ignore="MissingPrefix" />
+
+                        <EditText
+                            android:id="@+id/phoutletoutTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="69dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:hint="PH Outlet Keluar"
+                            android:minLines="3"
+                            tools:ignore="MissingPrefix" />
+
+                        <EditText
+                            android:id="@+id/suhuinletmskTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="69dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:hint="SUHU Inlet Masuk"
+                            tools:ignore="MissingPrefix" />
+
+                        <EditText
+                            android:id="@+id/suhuinletoutTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="69dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:hint="SUHU Inlet Keluar"
+                            android:minLines="3"
+                            tools:ignore="MissingPrefix" />
+
+                        <EditText
+                            android:id="@+id/suhuoutletmskTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="69dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:hint="SUHU Outlet Masuk"
+                            tools:ignore="MissingPrefix" />
+
+                        <EditText
+                            android:id="@+id/suhuoutletoutTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="69dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:hint="SUHU Outlet Keluar"
+                            android:minLines="3"
+                            tools:ignore="MissingPrefix" />
+
+                        <EditText
+                            android:id="@+id/alumuniumTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="69dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:hint="Bahan Kimia Alumunium"
+                            tools:ignore="MissingPrefix" />
+
+                        <EditText
+                            android:id="@+id/floaculanTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="69dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:hint="Bahan Kimia Floaculan"
+                            android:minLines="3"
+                            tools:ignore="MissingPrefix" />
+
+                        <EditText
+                            android:id="@+id/hasilwasteTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="69dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:hint="Hasil Waste"
+                            tools:ignore="MissingPrefix" />
+
+                        <EditText
+                            android:id="@+id/sludgemskTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="69dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:hint="Sludge Masuk (Kg)"
+                            android:minLines="3"
+                            tools:ignore="MissingPrefix" />
+
+                        <EditText
+                            android:id="@+id/sludgeoutTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="69dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:hint="Sludge Keluar (Kg)"
+                            tools:ignore="MissingPrefix" />
+
+                        <EditText
+                            android:id="@+id/debitTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="69dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:hint="Debit"
+                            android:minLines="3"
+                            tools:ignore="MissingPrefix" />
+
+                        <EditText
+                            android:id="@+id/selisihTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="69dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:hint="Selisih"
+                            android:minLines="3"
+                            tools:ignore="MissingPrefix" />
+
+                        <EditText
+                            android:id="@+id/baikTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="69dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:hint="Kondisi Flow Meter (Baik)"
+                            tools:ignore="MissingPrefix" />
+
+                        <EditText
+                            android:id="@+id/rusakTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="69dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:hint="Kondisi Flow Meter (Rusak)"
+                            android:minLines="3"
+                            tools:ignore="MissingPrefix" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

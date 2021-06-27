@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/m_splash_screen_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/mLogo"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:src="@drawable/sinarmas" />
+
+    <TextView
+        android:id="@+id/mainTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="APLIKASI PENCATATAN DATA LIMBAH"
+        android:textAlignment="center"
+        android:textColor="@color/colorTitleColor"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/subTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PT KATI KARTIKA MURNI TANGERANG"
+        android:textAlignment="center"
+        android:textColor="@color/colorTitleColor"
+        android:textSize="18sp"
+        android:gravity="center_horizontal" />
+
+
+
+
+</LinearLayout>
